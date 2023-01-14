@@ -13,7 +13,7 @@ def detect_phishing():
     url = request.json["url"]
     response = requests.post(f"https://safebrowsing.googleapis.com/v4/threatMatches:find?key={api_key}", json={
         "client": {
-            "clientId":      "Phishing dectector", # replace yourProjectName with the actual project name
+            "clientId":      "yourProjectName", # replace yourProjectName with the actual project name
             "clientVersion": "1.0.0"  # replace with the version of your application
         },
         "threatInfo": {
